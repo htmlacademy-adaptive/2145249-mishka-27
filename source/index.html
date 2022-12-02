@@ -9,7 +9,7 @@
 <body class="page-body">
   <header class="main-header">
     <a class="main-header__logo logo" href="#">
-      <img class="logo-image" src="img/logotype-phone.svg" alt="Магазин милых штук для дома 'Мишка'">
+      <img class="logo__image" src="img/logotype-phone.svg" alt="Магазин милых штук для дома 'Мишка'">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -63,7 +63,9 @@
 
     <section class="week-product">
       <div class="week-product__wrapper">
-        <h2 class="week-product__title">Вязаные корзинки</h2>
+        <a class="week-product__link" href="#">
+          <h2 class="week-product__title">Вязаные корзинки</h2>
+        </a>
         <p class="week-product__subtitle">Товар недели</p>
         <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и
           трёх размерах.</p>
@@ -81,7 +83,9 @@
             <dd class="week-product__value">15 см</dd>
           </div>
         </dl>
-        <img class="week-product__image" src="./img/knitted-basket.jpg" alt="Вязаные корзинки." height="315" width="260">
+        <a class="week-product__link" href="#">
+          <img class="week-product__image" src="./img/knitted-basket.jpg" alt="Вязаные корзинки." height="315" width="260">
+        </a>
         <p class="week-product__price">Цена: 990 руб.</p>
         <a class="week-product__order button" href="#">Заказать</a>
       </div>
@@ -117,7 +121,7 @@
             <span class="visually-hidden">Следующий отзыв</span>
           </button>
         </div>
-        <a class="reviews__button button" href="#">Написать</a>
+        <a class="reviews__write button" href="#">Написать</a>
       </div>
     </section>
 
@@ -128,7 +132,7 @@
           <div class="contacts__item">
             <dt class="contacts__property">e-mail:</dt>
             <dd class="contacts__description">
-              <a class="email" href="mailto: info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              <a class="email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
             </dd>
           </div>
           <div class="contacts__item">
@@ -147,8 +151,8 @@
 
   <footer class="main-footer">
     <div class="main-footer__wrapper">
-      <a class="main-footer__logo logo" href="">
-        <img class="logo-image" src="img/logotype-phone.svg" alt="Магазин милых штук для дома 'Мишка'">
+      <a class="main-footer__logo logo" href="#">
+        <img class="logo__image" src="img/logotype-phone.svg" alt="Магазин милых штук для дома 'Мишка'">
       </a>
       <div class="main-footer__social social">
         <ul class="social__list">
@@ -185,13 +189,13 @@
             </li>
             <li class="modal-size-filter__item">
               <label class="modal-size-filter__size size">
-                <input class="visually-hidden size__input" type="radio" name="product-size" value="medium" checked>
+                <input class="visually-hidden size__input" type="radio" name="product-size" value="medium">
                 <span class="size__label">M</span>
               </label>
             </li>
             <li class="modal-size-filter__item">
               <label class="modal-size-filter__size size">
-                <input class="visually-hidden size__input" type="radio" name="product-size" value="large" checked>
+                <input class="visually-hidden size__input" type="radio" name="product-size" value="large">
                 <span class="size__label">L</span>
               </label>
             </li>

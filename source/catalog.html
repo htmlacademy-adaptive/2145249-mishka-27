@@ -8,8 +8,8 @@
 
 <body class="page-body">
   <header class="main-header">
-    <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="img/logotype-phone.svg" alt="Магазин милых штук для дома 'Мишка'">
+    <a class="main-header__logo logo" href="index.html">
+      <img class="logo__image" src="img/logotype-phone.svg" alt="Магазин милых штук для дома 'Мишка'">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -57,8 +57,12 @@
     <ul class="catalog">
       <li class="catalog__item">
         <section class="product-card">
-          <img class="product-card__image" src="./img/rabbit.jpg" alt="Игрушка 'Зайчик-попрыгайчик'." width="260" height="195">
-          <h2 class="product-card__title">Зайчик-попрыгайчик</h2>
+          <a class="product-card__link" href="#">
+            <img class="product-card__image" src="./img/rabbit.jpg" alt="Игрушка 'Зайчик-попрыгайчик'." width="260" height="195">
+          </a>
+          <a class="product-card__link" href="#">
+            <h2 class="product-card__title">Зайчик-попрыгайчик</h2>
+          </a>
           <p class="product-card__description">Рост 30 см, вес 200 г</p>
           <footer class="product-card__footer">
             <p class="product-card__price">1 200 руб.</p>
@@ -75,8 +79,12 @@
       </li>
       <li class="catalog__item">
         <section class="product-card">
-          <img class="product-card__image" src="./img/laundry-basket.png" alt="Корзинка для белья." width="260" height="195">
-          <h2 class="product-card__title">Корзинка для белья</h2>
+          <a class="product-card__link" href="#">
+            <img class="product-card__image" src="./img/laundry-basket.png" alt="Корзинка для белья." width="260" height="195">
+          </a>
+          <a class="product-card__link" href="#">
+            <h2 class="product-card__title">Корзинка для белья</h2>
+          </a>
           <p class="product-card__description">Диаметр 15 см, высота 10 см</p>
           <footer class="product-card__footer">
             <p class="product-card__price">690 руб.</p>
@@ -93,8 +101,12 @@
       </li>
       <li class="catalog__item">
         <section class="product-card">
-          <img class="product-card__image" src="./img/toy-basket.png" alt="Большая корзинка для игрушек." width="260" height="195">
-          <h2 class="product-card__title">Большая корзинка для игрушек</h2>
+          <a class="product-card__link" href="#">
+            <img class="product-card__image" src="./img/toy-basket.png" alt="Большая корзинка для игрушек." width="260" height="195">
+          </a>
+          <a class="product-card__link" href="#">
+            <h2 class="product-card__title">Большая корзинка для игрушек</h2>
+          </a>
           <p class="product-card__description">Диаметр 30 см, высота 30 см</p>
           <footer class="product-card__footer">
             <p class="product-card__price">1 500 руб.</p>
@@ -113,8 +125,9 @@
 
     <section class="production">
       <h2 class="production__title">Процесс производства</h2>
-
-
+      <a class="production__video" href="#">
+        <img src="./img/video_preview.png" alt="Видео изготовления корзинки">
+      </a>
       <p class="production__description">
         По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
       </p>
@@ -124,10 +137,10 @@
   </main>
 
   <footer class="main-footer">
-    <a class="main-footer__logo logo" href="">
-      <img class="logo-image" src="img/logotype-phone.svg" alt="Магазин милых штук для дома 'Мишка'">
-    </a>
     <div class="main-footer__wrapper">
+      <a class="main-footer__logo logo" href="#">
+        <img class="logo__image" src="img/logotype-phone.svg" alt="Магазин милых штук для дома 'Мишка'">
+      </a>
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
@@ -163,13 +176,13 @@
             </li>
             <li class="modal-size-filter__item">
               <label class="modal-size-filter__size size">
-                <input class="visually-hidden size__input" type="radio" name="product-size" value="medium" checked>
+                <input class="visually-hidden size__input" type="radio" name="product-size" value="medium">
                 <span class="size__label">M</span>
               </label>
             </li>
             <li class="modal-size-filter__item">
               <label class="modal-size-filter__size size">
-                <input class="visually-hidden size__input" type="radio" name="product-size" value="large" checked>
+                <input class="visually-hidden size__input" type="radio" name="product-size" value="large">
                 <span class="size__label">L</span>
               </label>
             </li>
