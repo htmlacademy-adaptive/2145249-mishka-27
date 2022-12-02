@@ -8,7 +8,7 @@
 
 <body class="page-body">
   <header class="main-header">
-    <a class="main-header__logo logo" href="">
+    <a class="main-header__logo logo" href="#">
       <img class="logo-image" src="img/logotype-phone.svg" alt="Магазин милых штук для дома 'Мишка'">
     </a>
     <nav class="main-nav">
@@ -169,6 +169,38 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal-container modal-container--close">
+    <div class="modal modal-size-filter">
+      <section class="modal-size-filter__content">
+        <h2 class="modal-size-filter__title">Добавить в корзину</h2>
+        <fieldset class="modal-size-filter__group">
+          <legend class="modal-size-filter__ask">Выберите размер:</legend>
+          <ul class="modal-size-filter__list">
+            <li class="modal-size-filter__item">
+              <label class="modal-size-filter__size size">
+                <input class="visually-hidden size__input" type="radio" name="product-size" value="small" checked>
+                <span class="size__label">S</span>
+              </label>
+            </li>
+            <li class="modal-size-filter__item">
+              <label class="modal-size-filter__size size">
+                <input class="visually-hidden size__input" type="radio" name="product-size" value="medium" checked>
+                <span class="size__label">M</span>
+              </label>
+            </li>
+            <li class="modal-size-filter__item">
+              <label class="modal-size-filter__size size">
+                <input class="visually-hidden size__input" type="radio" name="product-size" value="large" checked>
+                <span class="size__label">L</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="modal-size-filter__button button button--modal" type="submit">Добавить</button>
+      </section>
+    </div>
+  </div>
 
 </body>
 
