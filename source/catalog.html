@@ -50,8 +50,8 @@
 
   <main class="main-container main-catalog">
 
-    <div class="main-catalog-hero hero">
-      <h1 class="main-catalog-hero-title">Каталог товаров</h1>
+    <div class="hero">
+      <h1 class="hero-title">Каталог товаров</h1>
     </div>
 
     <ul class="catalog">
@@ -172,30 +172,32 @@
     <div class="modal modal-size-filter">
       <section class="modal-size-filter__content">
         <h2 class="modal-size-filter__title">Добавить в корзину</h2>
-        <fieldset class="modal-size-filter__group">
-          <legend class="modal-size-filter__ask">Выберите размер:</legend>
-          <ul class="modal-size-filter__list">
-            <li class="modal-size-filter__item">
-              <label class="modal-size-filter__size size">
-                <input class="visually-hidden size__input" type="radio" name="product-size" value="small" checked>
-                <span class="size__label">S</span>
-              </label>
-            </li>
-            <li class="modal-size-filter__item">
-              <label class="modal-size-filter__size size">
-                <input class="visually-hidden size__input" type="radio" name="product-size" value="medium">
-                <span class="size__label">M</span>
-              </label>
-            </li>
-            <li class="modal-size-filter__item">
-              <label class="modal-size-filter__size size">
-                <input class="visually-hidden size__input" type="radio" name="product-size" value="large">
-                <span class="size__label">L</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="modal-size-filter__button button button--modal" type="submit">Добавить</button>
+        <form class="modal-size-filter_form size-filter" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="size-filter__group">
+            <legend class="size-filter__ask">Выберите размер:</legend>
+            <ul class="size-filter__list">
+              <li class="size-filter__item">
+                <label class="size-filter__size size">
+                  <input class="visually-hidden size__input" type="radio" name="product-size" value="small" checked>
+                  <span class="size__label">S</span>
+                </label>
+              </li>
+              <li class="size-filter__item">
+                <label class="size-filter__size size">
+                  <input class="visually-hidden size__input" type="radio" name="product-size" value="medium">
+                  <span class="size__label">M</span>
+                </label>
+              </li>
+              <li class="size-filter__item">
+                <label class="size-filter__size size">
+                  <input class="visually-hidden size__input" type="radio" name="product-size" value="large">
+                  <span class="size__label">L</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="size-filter__button button button--modal" type="submit">Добавить</button>
+        </form>
       </section>
     </div>
   </div>
