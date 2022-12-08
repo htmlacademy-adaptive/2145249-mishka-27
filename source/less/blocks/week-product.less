@@ -1,0 +1,60 @@
+.week-product {
+  margin: 30px;
+}
+
+.week-product__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.week-product__link {
+  display: block;
+  text-decoration: none;
+
+  &--image {
+    margin-bottom: 26px;
+  }
+}
+
+.week-product__title {
+  .font-style-title;
+  margin: 0;
+}
+
+.week-product__subtitle {
+  text-transform: uppercase;
+  .font-style(700; 17px; 20px; @base-color);
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+.week-product__description {
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.week-product__list {
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.week-product__item {
+  display: grid;
+  grid-template-columns: 97px 162px;
+  border-bottom: solid 1px #ececec;
+}
+
+.week-product__property {
+  min-height: 33px;
+}
+
+.week-product__price {
+  margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  .font-style(700; 17px; 30px; @text-color);
+}
+
+.week-product__order {
+  margin-bottom: 36px;
+}
