@@ -11,3 +11,37 @@
   display: block;
   padding: 27px 60px 27px 76px;
 }
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 32px;
+  }
+
+  .site-list__item {
+    box-shadow: none;
+  }
+
+  .site-list__link {
+    padding: 20px 18px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width-but) {
+  .site-list {
+    order: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    margin: 0;
+  }
+
+  .site-list__item {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}

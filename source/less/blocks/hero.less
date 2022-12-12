@@ -5,9 +5,10 @@
 }
 
 .hero--bg-image {
-  background-image: url("/img/hero.png");
+  background-image: url("/img/hero-mobile.png");
   background-repeat: no-repeat;
   min-height: 489px;
+  background-position: 50% 0;
 }
 
 .hero--bg-image .hero__title {
@@ -19,4 +20,27 @@
   .font-style(700; 27px; 30px; @color: @bold-text-color);
   padding: 74px 20px;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .hero {
+    box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  }
+
+  .hero--bg-image {
+    background-image: url("/img/hero-tablet.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .hero--bg-image .hero__title {
+    padding: 155px 133px 372px;
+    .font-style(700; 43px; 50px; @color: @bold-text-color);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hero--bg-image {
+    background-image: url("/img/hero-desktop.png");
+  }
 }

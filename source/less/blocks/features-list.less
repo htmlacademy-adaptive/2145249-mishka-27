@@ -1,0 +1,21 @@
+@media (max-width: @desktop-width-but) {
+  .features-list {
+    .visually-hidden;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features-list {
+    .nav-list;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .features-list__link {
+    .menu-link(15px);
+    display: block;
+    padding: 27px 58px 27px 30px;
+  }
+}
