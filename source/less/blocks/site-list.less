@@ -19,6 +19,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin-left: 32px;
+    max-width: 450px;
   }
 
   .site-list__item {
@@ -27,6 +28,7 @@
 
   .site-list__link {
     padding: 20px 18px;
+    font-size: 15px;
   }
 }
 
@@ -38,10 +40,14 @@
 
 @media (min-width: @desktop-width) {
   .site-list {
-    margin: 0;
+    margin: 0 15px;
   }
 
-  .site-list__item {
+  .site-list__item:not(:first-child) {
     border-left: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .site-list__link {
+    padding: 32px 35px;
   }
 }

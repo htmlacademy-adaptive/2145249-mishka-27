@@ -1,3 +1,26 @@
 .map__image {
   display: block;
+  margin: 0 auto;
 }
+
+@media (max-width: @mobile-width-only) {
+  .map__image--tablet,
+  .map__image--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width-but) {
+  .map__image--mobile,
+  .map__image--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__image--mobile,
+  .map__image--tablet {
+    display: none;
+  }
+}
+

@@ -35,12 +35,17 @@
 
   .hero--bg-image .hero__title {
     padding: 155px 133px 372px;
-    .font-style(700; 43px; 50px; @color: @bold-text-color);
+    .font-style(700; 43px; 50px; @bold-text-color);
   }
 }
 
 @media (min-width: @desktop-width) {
   .hero--bg-image {
     background-image: url("/img/hero-desktop.png");
+  }
+
+  .hero--bg-image .hero__title {
+    padding: 158px 225px 474px;
+    .font-style(700; 53px; 57px; @bold-text-color);
   }
 }

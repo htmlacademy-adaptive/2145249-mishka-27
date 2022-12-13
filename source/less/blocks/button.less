@@ -9,6 +9,16 @@
   margin: 0;
   padding: 16px;
   text-align: center;
-  border: 2px solid @text-color;
+  outline: 2px solid @text-color;
   background: @bg-color;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    font-size: 17px;
+  }
+
+  .button--reviews {
+    min-width: 175px;
+  }
 }
