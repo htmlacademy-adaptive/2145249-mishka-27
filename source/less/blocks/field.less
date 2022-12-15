@@ -1,6 +1,6 @@
 .field {
   border: 0;
-  border-bottom: 3px solid @text-color;
+  border-bottom: 2px solid @text-color;
   min-height: 52px;
   min-width: 260px;
   box-sizing: border-box;
@@ -10,4 +10,14 @@
 .field::placeholder {
   .font-style(400; 17px; 18px; @bold-text-color);
   opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .field {
+    padding: 18px;
+  }
+
+  .field::placeholder {
+    font-size: 19px;
+  }
 }

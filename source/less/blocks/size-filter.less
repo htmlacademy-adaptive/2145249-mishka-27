@@ -1,5 +1,8 @@
 .size-filter__group {
+  display: flex;
+  flex-direction: column;
   border: 0;
+  margin-bottom: 31px;
 }
 
 .size-filter__ask {
@@ -13,4 +16,15 @@
   display: flex;
   gap: 7px;
   justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .size-filter__ask {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .size-filter__button {
+    width: 100%;
+  }
 }

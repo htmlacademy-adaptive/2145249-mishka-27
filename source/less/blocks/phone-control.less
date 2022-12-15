@@ -1,12 +1,23 @@
 .phone-control {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-left: 0;
-  border-bottom: 3px solid @text-color;
+  border-bottom: 2px solid @text-color;
   .font-style(400; 17px; 18px; @bold-text-color);
 }
 
 .phone-control__input {
   border: 0;
   min-width: 228px;
+}
+
+@media (min-width: @tablet-width) {
+  .phone-control {
+    padding-right: 26px;
+  }
+
+  .phone-control__input {
+    background-color: @bg-second-page;
+  }
 }

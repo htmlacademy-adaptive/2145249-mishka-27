@@ -76,8 +76,10 @@
     <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
       <fieldset class="form__group">
-        <legend class="form__title">Тип</legend>
-        <ul class="form__list">
+        <div class="form__title-wrapper">
+          <legend class="form__title">Тип</legend>
+        </div>
+        <ul class="form__list form__list--radiobutton">
           <li class="form__item radiobutton">
             <label class="radiobutton__control">
               <input class="visually-hidden radiobutton__input" type="radio" name="type-product" value="interier" checked>
@@ -93,9 +95,11 @@
         </ul>
       </fieldset>
 
-      <fieldset class="form__group">
-        <legend class="form__title">Цвет</legend>
-        <ul class="form__list">
+      <fieldset class="form__group form__group--dark">
+        <div class="form__title-wrapper">
+          <legend class="form__title">Цвет</legend>
+        </div>
+        <ul class="form__list form__list--checkbox">
           <li class="form__item checkbox">
             <label class="checkbox__control">
               <input class="visually-hidden checkbox__input" type="checkbox" name="white" checked>
@@ -136,33 +140,41 @@
       </fieldset>
 
       <fieldset class="form__group">
-        <legend class="form__title">ФИО</legend>
-        <p class="control text-control">
-          <label class="text-control__label" for="text-control__name">Имя:</label>
-          <input class="text-control__input field" type="text" id="text-control__name" name="text-control__name" placeholder="Введите ваше имя*" required>
-        </p>
-        <p class="control text-control">
-          <label class="text-control__label" for="text-control__surname">Фамилия:</label>
-          <input class="text-control__input field" type="text" id="text-control__surname" name="text-control__surname" placeholder="Укажите фамилию*" required>
-        </p>
-        <p class="control text-control">
-          <label class="text-control__label" for="text-control__patronymic">Отчество:</label>
-          <input class="text-control__input field" type="text" id="text-control__patronymic" name="text-control__patronymic" placeholder="Отчество, если желаете">
-        </p>
+        <div class="form__title-wrapper">
+          <legend class="form__title">ФИО</legend>
+        </div>
+        <ol class="form__list form__list--text-control">
+          <li class="form__item text-control">
+            <label class="text-control__label" for="text-control__name">Имя:</label>
+            <input class="text-control__input field" type="text" id="text-control__name" name="text-control__name" placeholder="Введите ваше имя*" required>
+          </li>
+          <li class="form__item text-control">
+            <label class="text-control__label" for="text-control__surname">Фамилия:</label>
+            <input class="text-control__input field" type="text" id="text-control__surname" name="text-control__surname" placeholder="Укажите фамилию*" required>
+          </li>
+          <li class="form__item text-control">
+            <label class="text-control__label" for="text-control__patronymic">Отчество:</label>
+            <input class="text-control__input field" type="text" id="text-control__patronymic" name="text-control__patronymic" placeholder="Отчество, если желаете">
+          </li>
+        </ol>
       </fieldset>
 
-      <fieldset class="form__group">
-        <legend class="form__title">Тел</legend>
-        <p class="control phone-control">
+      <fieldset class="form__group form__group--dark form__group--phone">
+        <div class="form__title-wrapper">
+          <legend class="form__title">Тел</legend>
+        </div>
+        <p class="form__control phone-control">
           <label class="phone-control__label visually-hidden" for="phone-control">Телефон</label>
           <input class="phone-control__input field" type="tel" id="phone-control" name="phone-control" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
           <svg class="phone-control__icon" width="25" height="24" viewBox="0 0 25 24"><g opacity=".2"><path d="M17.4395 24h-1.1089c-4.9395-.5926-8.5685-2.8642-11.18947-5.7283C2.52016 15.4075.403226 11.7532 0 6.7162V5.33349c.100806-.88888.504032-1.48147 1.10887-2.07406.60484-.69135 1.6129-1.48147 2.52016-1.58023.70565 0 1.81452.49382 2.21774 1.08641.40323.49382.60484 1.58023.80646 2.37035.20161.88888.60483 1.97529.50403 2.76541-.20161 1.18518-1.81452 1.679-2.21774 2.56793 1.6129 3.6542 4.13306 6.4197 7.56048 8.1974.8065-.4938 1.6129-1.8765 2.8226-1.8765.4032 0 1.008.1975 1.4113.2963.504.0987.9072.2963 1.3105.4938.7056.2963 2.0161.5926 2.4193 1.1852s.7057 1.5802.6048 2.1728c-.3024 1.2839-2.4193 2.6666-3.629 3.0617ZM12.6008 1.48147c5.9476 0 10.8871 4.7407 10.8871 10.66663H25C25 5.43205 19.4556 0 12.6008 0v1.48147Z"/><path d="M12.6008 9.18506v1.58024c.8065 0 1.4113.5926 1.4113 1.3827h1.6129c0-1.5802-1.3105-2.96294-3.0242-2.96294ZM12.6008 6.12356c3.3266 0 6.1492 2.66665 6.1492 6.02464h1.6129c0-4.14811-3.4274-7.50611-7.6613-7.50611v1.48147h-.1008Z"/></g></svg>
         </p>
       </fieldset>
 
-      <fieldset class="form__group">
-        <legend class="form__title">E-mail</legend>
-        <p class="control email-control">
+      <fieldset class="form__group form__group--dark form__group--email">
+        <div class="form__title-wrapper">
+          <legend class="form__title">E-mail</legend>
+        </div>
+        <p class="form__control email-control">
           <label class="email-control__label visually-hidden" for="email-control">Электронная почта</label>
           <input class="email-control__input field" type="email" id="email-control" name="email-control" placeholder="Ваш Email*" required>
           <svg width="32" height="21" viewBox="0 0 32 21"><path opacity=".2" d="M28 0H4C1.8 0 0 1.8 0 4v13c0 2.2 1.8 4 4 4h24c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4ZM2 5.3l7 5.3-7 5.3V5.3ZM30 17c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2l7.8-5.9 4.4 3.3c.5.4 1.2.6 1.8.6.6 0 1.3-.2 1.8-.6l4.4-3.3L30 17Zm0-1.2-7-5.3 7-5.3v10.6Zm-12.8-2.2c-.4.3-.8.4-1.2.4-.4 0-.9-.1-1.2-.4l-4.1-3.1-.8-.6L2 4c0-1.1.9-2 2-2h24c1.1 0 2 .9 2 2l-12.8 9.6Z"/></svg>
@@ -170,18 +182,22 @@
       </fieldset>
 
       <fieldset class="form__group form__group--extra">
-        <legend class="form__title">Доп</legend>
+        <div class="form__title-wrapper">
+          <legend class="form__title">Доп</legend>
+        </div>
         <p class="control extra-control">
           <label class="extra-control__label visually-hidden" for="extra-control">Дополнительные пожелания</label>
-          <textarea class="extra-control__input field" name="extra-control" id="extra-control" cols="22" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <textarea class="extra-control__input field" name="extra-control" id="extra-control" cols="22" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </p>
       </fieldset>
 
-      <p class="form__note">
-        <small>*Поля обязательны для заполнения</small>
-      </p>
+      <div class="form__footer">
+        <p class="form__note">
+          <small>*Поля обязательны для заполнения</small>
+        </p>
 
-      <button class="form__button button" type="submit">Отправить заказ</button>
+        <button class="form__button button" type="submit">Отправить заказ</button>
+      </div>
 
     </form>
 
@@ -190,7 +206,7 @@
   <footer class="main-footer">
     <div class="main-footer__wrapper">
       <a class="main-footer__logo logo" href="#">
-        <img class="logo__image logo__image--hidden" src="img/logotype-phone.svg" alt="Магазин милых штук для дома 'Мишка'">
+        <img class="logo__image" src="img/logo-white.svg" alt="Магазин милых штук для дома 'Мишка'">
       </a>
       <div class="main-footer__social social">
         <ul class="social__list">
