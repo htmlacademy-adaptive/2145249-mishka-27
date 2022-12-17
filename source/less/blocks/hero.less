@@ -5,6 +5,7 @@
 }
 
 .hero--bg-image {
+  background-color: @bg-color;
   background-image: url("/img/hero-mobile.png");
   background-repeat: no-repeat;
   min-height: 489px;
@@ -56,5 +57,8 @@
   .hero__title {
     .font-style(700; 53px; 57px; @bold-text-color);
     padding: 102px 320px 96px;
+    max-width: @desktop-width;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 }

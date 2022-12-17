@@ -1,4 +1,4 @@
-.production {
+.production__wrapper {
   display: grid;
   margin: 0 30px 19px 30px;
   min-width: 260px;
@@ -27,7 +27,7 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .production {
+  .production__wrapper {
     min-height: 503px;
   }
 
@@ -49,7 +49,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .production {
+  .production__wrapper {
     margin: 3px 50px 14px;
   }
 
@@ -72,7 +72,13 @@
 
 @media (min-width: @desktop-width) {
   .production {
-    margin-bottom: 51px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .production__wrapper {
+    max-width: 1050px;
+    margin: 3px 0 51px 0;
     grid-template-columns: 683px auto;
   }
 

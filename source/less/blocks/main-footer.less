@@ -32,8 +32,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-footer__logo {
-    line-height: 0;
+  .main-footer {
+    background-color: @bg-second-page;
   }
 
   .main-footer__wrapper {
@@ -43,11 +43,21 @@
     align-items: center;
   }
 
+  .main-footer__logo {
+    line-height: 0;
+  }
+
   .main-footer__social {
     padding: 0;
   }
 
   .main-footer__copyright {
     padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer__wrapper {
+    width: @desktop-width;
   }
 }
