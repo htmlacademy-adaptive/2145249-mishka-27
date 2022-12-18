@@ -19,3 +19,29 @@
   font-size: 19px;
   color: @bg-color;
 }
+
+@media (min-width: @tablet-width) {
+  .product-type__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 50px;
+  }
+
+  .product-type__item {
+    min-width: 50%;
+    box-sizing: border-box;
+  }
+
+  .product-type__link {
+    .font-style(700; 20px; 30px; @bg-color);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-type__list {
+    max-width: @desktop-width;
+    margin: 0 auto;
+    margin-top: -131px;
+  }
+}

@@ -1,20 +1,25 @@
+.map__image {
+  display: block;
+  margin: 0 auto;
+}
+
 @media (max-width: @mobile-width-only) {
-  .logo__image--black,
-  .logo__image--black-detail {
+  .map__image--tablet,
+  .map__image--desktop {
     display: none;
   }
 }
 
 @media (min-width: @tablet-width) and (max-width: @desktop-width-but) {
-  .logo__image--white,
-  .logo__image--black-detail {
+  .map__image--mobile,
+  .map__image--desktop {
     display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .logo__image--white,
-  .logo__image--black {
+  .map__image--mobile,
+  .map__image--tablet {
     display: none;
   }
 }

@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -11,7 +12,9 @@
   <header class="main-header">
     <div class="main-header__wrapper">
       <a class="main-header__logo logo" href="index.html">
-        <img class="logo__image" src="img/logotype-phone.svg" alt="Магазин милых штук для дома 'Мишка'" width="86" height="35">
+        <img class="logo__image logo__image--white" src="img/logo-white.svg" alt="Магазин милых штук для дома 'Мишка'" width="86" height="35">
+        <img class="logo__image logo__image--black" src="img/logo-black.svg" alt="Магазин милых штук для дома 'Мишка'" width="113" height="46">
+        <img class="logo__image logo__image--black-detail" src="img/logo-black-detail.svg" alt="Магазин милых штук для дома 'Мишка'" width="149" height="72">
       </a>
       <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
@@ -33,7 +36,7 @@
                   d="m17.6932 16.0568-3.4773-3.4773C15.2386 11.25 15.75 9.61364 15.75 7.875 15.75 3.47727 12.2727 0 7.875 0 3.47727 0 0 3.47727 0 7.875c0 4.3977 3.47727 7.875 7.875 7.875 1.73864 0 3.375-.6136 4.7045-1.5341l3.4773 3.4773c.2046.2045.4091.3068.8182.3068.6136 0 1.125-.5114 1.125-1.125 0-.2045-.1023-.5114-.3068-.8182ZM2.25 7.875c0-3.06818 2.55682-5.625 5.625-5.625 3.0682 0 5.625 2.55682 5.625 5.625 0 3.0682-2.5568 5.625-5.625 5.625-3.06818 0-5.625-2.5568-5.625-5.625Z"
                   fill="#000000" />
               </svg>
-              Поиск по сайту
+              <span class="user-list__search-legend">Поиск по сайту</span>
             </a>
           </li>
           <li class="user-list__basket">
@@ -48,7 +51,18 @@
           </li>
         </ul>
       </div>
+      <ul class="main-nav__list features-list">
+        <li class="features-list__item">
+          <a class="features-list__link" href="#">Новые поступления</a>
+        </li>
+        <li class="features-list__item">
+          <a class="features-list__link" href="#">Распродажа</a>
+        </li>
+      </ul>
     </nav>
+    <p class="main-header__benefit">
+      Бесплатная доставка по России
+    </p>
   </header>
 
   <main class="main-container main-catalog">
@@ -61,14 +75,17 @@
       <li class="catalog__item">
         <section class="product-card">
           <a class="product-card__link" href="#">
-            <img class="product-card__image" src="./img/rabbit.jpg" alt="Игрушка 'Зайчик-попрыгайчик'." width="260"
-              height="195">
+            <img class="product-card__image product-card__image--phone" src="./img/rabbit-phone.jpg" alt="Игрушка 'Зайчик-попрыгайчик'." width="260" height="195">
+            <img class="product-card__image product-card__image--tablet" src="./img/rabbit-tablet.jpg" alt="Игрушка 'Зайчик-попрыгайчик'." width="334" height="334">
+            <img class="product-card__image product-card__image--desktop" src="./img/rabbit-desktop.jpg" alt="Игрушка 'Зайчик-попрыгайчик'." width="316" height="462">
           </a>
           <div class="product-card__content">
-            <a class="product-card__link" href="#">
-              <h2 class="product-card__title">Зайчик-попрыгайчик</h2>
-            </a>
-            <p class="product-card__description">Рост 30 см, вес 200 г</p>
+            <div class="product-card__content-wrapper">
+              <a class="product-card__link" href="#">
+                <h2 class="product-card__title">Зайчик-попрыгайчик</h2>
+              </a>
+              <p class="product-card__description">Рост 30 см, вес 200 г</p>
+            </div>
             <footer class="product-card__footer">
               <p class="product-card__price">1 200 руб.</p>
               <a class="product-card__button" href="#">
@@ -85,14 +102,17 @@
       <li class="catalog__item">
         <section class="product-card">
           <a class="product-card__link" href="#">
-            <img class="product-card__image" src="./img/laundry-basket.png" alt="Корзинка для белья." width="260"
-              height="195">
+            <img class="product-card__image product-card__image--phone" src="./img/laundry-basket-phone.jpg" alt="Корзинка для белья." width="260" height="195">
+            <img class="product-card__image product-card__image--tablet" src="./img/laundry-basket-tablet.jpg" alt="Корзинка для белья." width="334" height="334">
+            <img class="product-card__image product-card__image--desktop" src="./img/laundry-basket-desktop.jpg" alt="Корзинка для белья." width="316" height="462">
           </a>
           <div class="product-card__content">
-            <a class="product-card__link" href="#">
-              <h2 class="product-card__title">Корзинка для белья</h2>
-            </a>
-            <p class="product-card__description">Диаметр 15 см, высота 10 см</p>
+            <div class="product-card__content-wrapper">
+              <a class="product-card__link" href="#">
+                <h2 class="product-card__title">Корзинка для белья</h2>
+              </a>
+              <p class="product-card__description">Диаметр 15 см, высота 10 см</p>
+            </div>
             <footer class="product-card__footer">
               <p class="product-card__price">690 руб.</p>
               <a class="product-card__button" href="#">
@@ -109,14 +129,17 @@
       <li class="catalog__item">
         <section class="product-card">
           <a class="product-card__link" href="#">
-            <img class="product-card__image" src="./img/toy-basket.png" alt="Большая корзинка для игрушек." width="260"
-              height="195">
+            <img class="product-card__image product-card__image--phone" src="./img/toy-basket-phone.jpg" alt="Большая корзинка для игрушек." width="260" height="195">
+            <img class="product-card__image product-card__image--tablet" src="./img/toy-basket-tablet.jpg" alt="Большая корзинка для игрушек." width="334" height="334">
+            <img class="product-card__image product-card__image--desktop" src="./img/toy-basket-desktop.jpg" alt="Большая корзинка для игрушек." width="316" height="462">
           </a>
           <div class="product-card__content">
-            <a class="product-card__link" href="#">
-              <h2 class="product-card__title">Большая корзинка для игрушек</h2>
-            </a>
-            <p class="product-card__description">Диаметр 30 см, высота 30 см</p>
+            <div class="product-card__content-wrapper">
+              <a class="product-card__link" href="#">
+                <h2 class="product-card__title">Большая корзинка для&nbsp;игрушек</h2>
+              </a>
+              <p class="product-card__description">Диаметр 30 см, высота 30 см</p>
+            </div>
             <footer class="product-card__footer">
               <p class="product-card__price">1 500 руб.</p>
               <a class="product-card__button" href="#">
@@ -133,14 +156,18 @@
     </ul>
 
     <section class="production">
-      <h2 class="production__title">Процесс производства</h2>
+      <div class="production__wrapper">
+        <h2 class="production__title">Процесс производства</h2>
       <a class="production__video" href="#">
-        <img src="./img/video_preview.png" alt="Видео изготовления корзинки">
+        <img class="production__image production__image--phone" src="./img/video_preview-phone.png" alt="Видео изготовления корзинки">
+        <img class="production__image production__image--tablet" src="./img/video_preview-tablet.png" alt="Видео изготовления корзинки">
+        <img class="production__image production__image--desktop" src="./img/video_preview-desktop.png" alt="Видео изготовления корзинки">
       </a>
       <p class="production__description">
         По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
       </p>
       <a class="production__button button" href="#">Сделать заказ</a>
+      </div>
     </section>
 
   </main>
@@ -148,7 +175,7 @@
   <footer class="main-footer">
     <div class="main-footer__wrapper">
       <a class="main-footer__logo logo" href="#">
-        <img class="logo__image logo__image--hidden" src="img/logotype-phone.svg" alt="Магазин милых штук для дома 'Мишка'">
+        <img class="logo__image" src="img/logo-white.svg" alt="Магазин милых штук для дома 'Мишка'">
       </a>
       <div class="main-footer__social social">
         <ul class="social__list">

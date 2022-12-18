@@ -1,12 +1,23 @@
 .email-control {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-left: 0;
-  border-bottom: 3px solid @text-color;
+  border-bottom: 2px solid @text-color;
   .font-style(400; 17px; 18px; @bold-text-color);
 }
 
 .email-control__input {
   border: 0;
   min-width: 225px;
+}
+
+@media (min-width: @tablet-width) {
+  .email-control {
+    padding-right: 22px;
+  }
+
+  .email-control__input {
+    background-color: @bg-second-page;
+  }
 }

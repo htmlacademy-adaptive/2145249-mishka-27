@@ -4,3 +4,20 @@
   display: grid;
   gap: 30px;
 }
+
+@media (min-width: @tablet-width) {
+  .catalog {
+    margin: 50px;
+    margin-top: 67px;
+    gap: 54px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    max-width: @desktop-width;
+    margin: 67px auto 111px auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 49px;
+  }
+}
