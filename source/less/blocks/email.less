@@ -2,4 +2,14 @@
   .font-style(400; 14px; 30px; @text-color);
   text-decoration: none;
   border-bottom: 1px solid #62d1ba;
+
+  &:hover {
+    color: @hover-color;
+    border-bottom: 1px solid @hover-color;
+  }
+
+  &:active {
+    color: @hover-color;
+    border-bottom: none;
+  }
 }

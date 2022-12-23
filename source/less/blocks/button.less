@@ -11,7 +11,16 @@
   text-align: center;
   outline: 2px solid @text-color;
   border: 0;
-  background: @bg-color;
+  background-color: @bg-color;
+
+  &:hover {
+    color: @bg-color;
+    background-color: @text-color;
+  }
+
+  &:active {
+    color: fade(@bg-color, 30%);
+  }
 }
 
 @media (min-width: @tablet-width) {

@@ -1,25 +1,28 @@
-.map__image {
+.map {
   display: block;
   margin: 0 auto;
 }
 
 @media (max-width: @mobile-width-only) {
-  .map__image--tablet,
-  .map__image--desktop {
-    display: none;
+  .map {
+    width: 320px;
+    height: 457px;
+    margin-bottom: 42px;
   }
 }
 
-@media (min-width: @tablet-width) and (max-width: @desktop-width-but) {
-  .map__image--mobile,
-  .map__image--desktop {
-    display: none;
+@media (min-width: @tablet-width) {
+  .map {
+    width: 768px;
+    height: 454px;
+    margin-bottom: 52px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .map__image--mobile,
-  .map__image--tablet {
-    display: none;
+  .map {
+    width: 527px;
+    height: 457px;
+    margin-bottom: 0;
   }
 }

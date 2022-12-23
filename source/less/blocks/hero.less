@@ -5,7 +5,7 @@
 }
 
 .hero--bg-image {
-  background-color: @bg-color;
+  background-color: #f9f9f9;
   background-image: url("/img/hero-mobile.png");
   background-repeat: no-repeat;
   min-height: 489px;
@@ -29,9 +29,21 @@
   }
 
   .hero--bg-image {
+    position: relative;
     background-image: url("/img/hero-tablet.png");
     background-repeat: no-repeat;
     background-position: center;
+    z-index: -1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -11px;
+      width: 100%;
+      height: 24px;
+      background-image: url("/img/wave-tablet.svg");
+    }
   }
 
   .hero--bg-image .hero__title {
@@ -47,6 +59,16 @@
 @media (min-width: @desktop-width) {
   .hero--bg-image {
     background-image: url("/img/hero-desktop.png");
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -17px;
+      width: 100%;
+      height: 34px;
+      background-image: url("/img/wave-desktop.svg");
+    }
   }
 
   .hero--bg-image .hero__title {
