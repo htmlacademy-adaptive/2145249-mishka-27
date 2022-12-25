@@ -25,14 +25,8 @@
 
 @media (min-width: @tablet-width) {
   .hero {
-    box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
-  }
-
-  .hero--bg-image {
     position: relative;
-    background-image: url("/img/hero-tablet.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
     z-index: -1;
 
     &::after {
@@ -46,6 +40,12 @@
     }
   }
 
+  .hero--bg-image {
+    background-image: url("/img/hero-tablet.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   .hero--bg-image .hero__title {
     padding: 155px 133px 372px;
   }
@@ -57,18 +57,16 @@
 }
 
 @media (min-width: @desktop-width) {
-  .hero--bg-image {
-    background-image: url("/img/hero-desktop.png");
-
+  .hero {
     &::after {
-      content: "";
-      position: absolute;
-      left: 0;
       bottom: -17px;
-      width: 100%;
       height: 34px;
       background-image: url("/img/wave-desktop.svg");
     }
+  }
+
+  .hero--bg-image {
+    background-image: url("/img/hero-desktop.png");
   }
 
   .hero--bg-image .hero__title {

@@ -6,12 +6,25 @@
   margin-left: 0;
   border-bottom: 2px solid @text-color;
   .font-style(400; 17px; 18px; @bold-text-color);
+
+  &:hover,
+  &:active {
+    border-bottom-color: #62d1ba;
+
+    .email-control__icon {
+      fill: fade(#62d1ba, 100%);
+    }
+  }
 }
 
 .email-control__input {
   border: 0;
   min-width: 225px;
   flex-grow: 1;
+}
+
+.email-control__icon {
+  fill: fade(@bold-text-color, 20%);
 }
 
 @media (min-width: @tablet-width) {

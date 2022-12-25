@@ -1,13 +1,65 @@
 .radiobutton__label {
   .font-style-title(700; 17px; 18px; @bold-text-color);
+  padding-left: 61px;
+  position: relative;
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+
+  &::before {
+    width: 42px;
+    height: 42px;
+    background-color: @bg-color;
+    border: 2px solid @text-color;
+    left: 0;
+  }
+
+  &::after {
+    display: none;
+    width: 16px;
+    height: 16px;
+    background-color: #62d1ba;
+    left: 13px;
+    top: 13px;
+  }
+
+  &:hover::before {
+    border-color: #62d1ba;
+  }
+
+  &:active::before {
+    border-color: fade(@bold-text-color, 30%);
+  }
 }
 
-.radiobutton__control {
-  padding-left: 61px;
+.radiobutton__input:checked + .radiobutton__label::after {
+  display: block;
 }
 
 @media (min-width: @tablet-width) {
   .radiobutton__label {
     font-size: 19px;
+    min-height: 52px;
+    padding-left: 78px;
+
+    &::before {
+      width: 52px;
+      height: 52px;
+    }
+
+    &::after {
+      width: 20px;
+      height: 20px;
+      left: 16px;
+      top: 16px;
+    }
   }
 }

@@ -1,0 +1,24 @@
+.size__label {
+  display: block;
+  padding: 16px;
+  width: 82px;
+  height: 52px;
+  border: 2px solid fade(@text-color, 10%);
+  box-sizing: border-box;
+  text-align: center;
+  .font-style-title(700; 17px; 16px;@text-color);
+
+  &:hover {
+    border-color: fade(@text-color, 30%);
+  }
+}
+
+.size__input:checked + .size__label {
+  border-color: fade(#63d1bb, 100%);
+}
+
+@media (min-width: @tablet-width) {
+  .size__label {
+    width: 112px;
+  }
+}
