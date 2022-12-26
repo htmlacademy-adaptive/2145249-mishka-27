@@ -15,6 +15,14 @@
   width: 27px;
   height: 27px;
   text-align: center;
+
+  &:hover .social__icon {
+    fill: @hover-color;
+  }
+
+  &:active .social__icon {
+    fill: fade(@hover-color, 30%);
+  }
 }
 
 .social__icon {

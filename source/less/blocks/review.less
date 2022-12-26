@@ -1,5 +1,16 @@
 .reviews {
   margin: 0 auto;
+  position: relative;
+  width: 100%;
+
+  &::after {
+    content: "";
+    background-image: url("/img/wave-grey-mobile.svg");
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    bottom: -15px;
+  }
 }
 
 .reviews__wrapper {
@@ -50,9 +61,33 @@
   min-width: 130px;
   border: 1px solid #ececec;
   background-color: @bg-color;
+
+  &:hover .reviews__arrow {
+    fill: fade(@bold-text-color, 60%);
+  }
+
+  &:active .reviews__arrow {
+    fill: fade(@bold-text-color, 30%);
+  }
 }
 
+.reviews__arrow {
+  fill: @bold-text-color;
+}
+
+
 @media (min-width: @tablet-width) {
+  .reviews {
+    &::after {
+      content: "";
+      background-image: url("/img/wave-grey-tablet.svg");
+      position: absolute;
+      width: 100%;
+      height: 17px;
+      bottom: -35px;
+    }
+  }
+
   .reviews__wrapper {
     margin: 50px 0;
     padding: 82px 50px 47px;
@@ -112,11 +147,22 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    max-width: @desktop-width;
+    &::after {
+      content: "";
+      background-image: url("/img/wave-grey-desktop.svg");
+      position: absolute;
+      width: 100%;
+      height: 23px;
+      left: 0;
+      bottom: -17px;
+    }
   }
 
   .reviews__wrapper {
-    margin: 50px;
+    @margin-reviews: 50px;
+    max-width: calc(@desktop-width - @margin-reviews * 2);
+    box-sizing: border-box;
+    margin: @margin-reviews auto;
     padding: 78px 0 96px 174px;
     display: grid;
     grid-template-columns: auto 175px;

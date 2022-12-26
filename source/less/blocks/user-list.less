@@ -11,10 +11,29 @@
   .menu-link;
   display: block;
   padding: 27px 58px 27px 30px;
+
+  &:hover {
+    color: fade(@bold-text-color, 60%);
+
+    .user-list__search-icon,
+    .user-list__basket-icon {
+      fill: @base-color;
+    }
+  }
+
+  &:active {
+    color: fade(@bold-text-color, 30%);
+
+    .user-list__search-icon,
+    .user-list__basket-icon {
+      fill: fade(@base-color, 30%);
+    }
+  }
 }
 
 .user-list__search-icon,
 .user-list__basket-icon {
+  fill: fade(@bold-text-color, 20%);
   padding-right: 25px;
 }
 

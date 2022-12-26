@@ -16,12 +16,44 @@
   .nav-list;
   display: grid;
   grid-template-columns: 260px;
+  row-gap: 32px;
 }
 
 .about__item {
+  position: relative;
   .font-style-title(700, 17px, 20px, @bold-text-color);
   min-height: 40px;
   padding-top: 60px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 7px;
+  }
+
+  &--ecology::before {
+    content: url("/img/about/ecology.svg");
+  }
+
+  &--nordic::before {
+    content: url("/img/about/nordic.svg");
+  }
+
+  &--like::before {
+    content: url("/img/about/like.svg");
+  }
+
+  &--handmade::before {
+    content: url("/img/about/handmade.svg");
+  }
+
+  &--native::before {
+    content: url("/img/about/native.svg");
+  }
+
+  &--present::before {
+    content: url("/img/about/present.svg");
+  }
 }
 
 @media (min-width: @tablet-width) {

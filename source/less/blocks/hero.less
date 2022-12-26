@@ -5,7 +5,7 @@
 }
 
 .hero--bg-image {
-  background-color: @bg-color;
+  background-color: #f9f9f9;
   background-image: url("/img/hero-mobile.png");
   background-repeat: no-repeat;
   min-height: 489px;
@@ -25,7 +25,19 @@
 
 @media (min-width: @tablet-width) {
   .hero {
+    position: relative;
     box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+    z-index: -1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -11px;
+      width: 100%;
+      height: 24px;
+      background-image: url("/img/wave-tablet.svg");
+    }
   }
 
   .hero--bg-image {
@@ -45,6 +57,14 @@
 }
 
 @media (min-width: @desktop-width) {
+  .hero {
+    &::after {
+      bottom: -17px;
+      height: 34px;
+      background-image: url("/img/wave-desktop.svg");
+    }
+  }
+
   .hero--bg-image {
     background-image: url("/img/hero-desktop.png");
   }

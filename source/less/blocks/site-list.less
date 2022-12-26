@@ -10,6 +10,14 @@
   .menu-link;
   display: block;
   padding: 27px 60px 27px 76px;
+
+  &:hover {
+    color: fade(@bold-text-color, 60%);
+  }
+
+  &:active {
+    color: fade(@bold-text-color, 30%);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -49,5 +57,6 @@
 
   .site-list__link {
     padding: 32px 35px;
+    font-size: 17px;
   }
 }

@@ -11,7 +11,26 @@
   text-align: center;
   outline: 2px solid @text-color;
   border: 0;
-  background: @bg-color;
+  background-color: @bg-color;
+
+  &:hover {
+    color: @bg-color;
+    background-color: @text-color;
+  }
+
+  &:active {
+    color: fade(@bg-color, 30%);
+  }
+}
+
+.button--modal {
+  .font-style(700; 17px; 16px; @bg-color);
+  outline-color: @base-color;
+  background-color: @base-color;
+
+  &:hover {
+    outline-color: @text-color;
+  }
 }
 
 @media (min-width: @tablet-width) {

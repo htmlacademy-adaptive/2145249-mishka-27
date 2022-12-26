@@ -50,9 +50,16 @@
   }
 
   .contacts__title {
+    position: relative;
     padding: 0 50px;
     margin-bottom: 49px;
     .font-style-title(700; 43px; 50px; @bold-text-color);
+
+    &::before {
+      content: url("/img/flag.svg");
+      position: absolute;
+      right: 54px;
+    }
   }
 
   .contacts__list {
@@ -99,6 +106,12 @@
     padding-top: 69px;
     margin-bottom: 34px;
     .font-style-title(700; 53px; 57px; @bold-text-color);
+
+    &::before {
+      content: url("/img/flag.svg");
+      left: 63px;
+      top: 66px;
+    }
   }
 
   .contacts__list {
