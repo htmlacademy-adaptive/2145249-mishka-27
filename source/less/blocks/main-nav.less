@@ -1,4 +1,4 @@
-.main-nav__wrapper {
+.main-nav {
   display: flex;
   flex-direction: column;
   .font-style(700; 17px; 24px; @bold-text-color);
@@ -9,7 +9,8 @@
     z-index: 1;
   }
 
-  .main-nav--opened {
+  .main-nav--opened,
+  .main-nav--nojs {
     position: absolute;
     width: 100%;
     background-color: @bg-color;
@@ -30,94 +31,29 @@
     display: none;
   }
 
-  .main-nav--nojs .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav--nojs .main-nav__wrapper {
+  .main-nav--nojs {
     position: static;
-    min-height: 0;
   }
 
-  .main-nav__toggle {
-    position: absolute;
-    right: 0;
-    z-index: 2;
+  .main-nav--nojs .site-list,
+  .main-nav--nojs .user-list {
     display: block;
-    width: 20px;
-    height: 20px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    padding: 30px;
-  }
-
-  .main-nav--closed .main-nav__toggle {
-    top: 5px;
-    right: -220px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 27px;
-      left: 20px;
-      width: 20px;
-      height: 2px;
-      background-color: #231f20;
-      box-shadow: 0 6px 0 0 #231f20, 0 12px 0 #231f20;
-    }
-
-    &:active::before {
-      background-color: fade(#231f20, 60%);
-      box-shadow:
-        0 6px 0 0 fade(#231f20, 60%),
-        0 12px 0 0 fade(#231f20, 60%);
-    }
-  }
-
-  .main-nav--opened .main-nav__toggle {
-    top: -70px;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 29px;
-      left: 20px;
-      width: 27px;
-      height: 2px;
-      background-color: #231f20;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-      box-shadow: none;
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-
-    &:active::before,
-    &:active::after {
-      background-color: fade(#231f20, 60%);
-    }
   }
 }
 
 @media (min-width: @tablet-width) {
-  .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav__wrapper {
+  .main-nav {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .main-nav__wrapper {
+  .main-nav {
     justify-content: space-between;
   }
 }
