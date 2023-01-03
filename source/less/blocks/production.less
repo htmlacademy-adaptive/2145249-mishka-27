@@ -17,12 +17,33 @@
   .font-style-title(700; 17px; 24px; @bold-text-color);
   margin: 0;
   padding: 21px 13px 27px 91px;
+  position: relative;
+
+  &::before {
+    content: url("/img/production-icon.svg");
+    position: absolute;
+    left: 34px;
+    top: 35px;
+  }
 }
 
 .production__video-wrapper {
   line-height: 0;
   position: relative;
   margin: 0 auto;
+  background-image: url("/img/preview-phone.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/preview-phone@2x.jpg");
+    background-size: 260px auto;
+  }
+}
+
+.production__video {
+  width: 260px;
+  height: 150px;
 }
 
 .production__video-button {
@@ -62,21 +83,30 @@
   .production__wrapper {
     min-height: 503px;
   }
-
-  .production__video--tablet,
-  .production__video--desktop {
-    display: none;
-  }
 }
 
 @media (min-width: @tablet-width) and (max-width: @desktop-width-but) {
   .production__title {
     grid-row: 2 / 3;
+
+    &::before {
+      left: 42px;
+      top: 39px;
+    }
   }
 
-  .production__video--phone,
-  .production__video--desktop {
-    display: none;
+  .production__video-wrapper {
+    background-image: url("/img/preview-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/preview-tablet@2x.jpg");
+      background-size: 668px auto;
+    }
+  }
+
+  .production__video {
+    width: 668px;
+    height: 455px;
   }
 }
 
@@ -89,6 +119,11 @@
     font-size: 20px;
     padding-top: 41px;
     padding-bottom: 26px;
+
+    &::before {
+      left: 79px;
+      top: 47px;
+    }
   }
 
   .production__description {
@@ -121,11 +156,17 @@
   .production__video-wrapper {
     grid-column: 1 / 2;
     grid-row: 1 / 4;
+    background-image: url("/img/preview-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/preview-desktop@2x.jpg");
+      background-size: 683px auto;
+    }
   }
 
-  .production__video--phone,
-  .production__video--tablet {
-    display: none;
+  .production__video {
+    width: 683px;
+    height: 455px;
   }
 
   .production__description {
