@@ -18,7 +18,7 @@
 }
 
 .form__group--extra {
-  margin-bottom: 17px;
+  margin-bottom: 7px;
 }
 
 .form__title {
@@ -63,6 +63,7 @@
 
 .form__button {
   min-width: 230px;
+  font-size: 17px;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -92,6 +93,7 @@
     &--phone {
       margin-top: 17px;
       margin-bottom: 2px;
+      padding-right: 28px;
     }
 
     &--email {
@@ -101,12 +103,17 @@
 
     &--extra {
       margin-top: -4px;
+      margin-bottom: 21px;
     }
   }
 }
 
 @media (min-width: @tablet-width) {
   .form {
+    margin: 0;
+  }
+
+  .form__group {
     margin: 0;
   }
 
@@ -118,6 +125,10 @@
     margin-bottom: 0;
   }
 
+  .form__group--extra .form__wrapper {
+    padding-bottom: 42px;
+  }
+
   .form__wrapper {
     display: grid;
     grid-template-columns: 88px auto;
@@ -126,24 +137,54 @@
     padding: 50px;
   }
 
+  .form__wrapper--checkbox {
+    padding: 55px 50px 50px;
+  }
+
+  .form__wrapper--text-control {
+    padding-top: 46px;
+  }
+
+  .form__wrapper--text-control .form__title {
+    margin-top: 21px;
+  }
+
+
   .form__wrapper--phone {
     padding-bottom: 0;
+    padding-top: 45px;
   }
 
   .form__wrapper--email {
     padding-top: 0;
+    padding-bottom: 26px;
   }
 
   .form__title {
-    margin-top: 19px;
+    margin-top: 10px;
+  }
+
+  .form__title--radiobutton {
+    margin-top: 18px;
+  }
+
+  .form__title--phone,
+  .form__title--email,
+  .form__title--extra {
+    margin-top: 20px;
   }
 
   .form__list {
     row-gap: 24px;
+    column-gap: 22px;
   }
 
   .form__list--checkbox {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .form__list--text-control {
+    row-gap: 20px;
   }
 
   .form__footer {
@@ -160,15 +201,42 @@
 
 @media (min-width: @desktop-width) {
   .form__wrapper {
-    padding-left: 97px;
+    padding-left: 111px;
     padding-right: 225px;
-    column-gap: 38px;
+    padding-bottom: 47px;
+    column-gap: 26px;
     width: @desktop-width;
     box-sizing: border-box;
   }
 
+  .form__wrapper--checkbox {
+    padding-right: 195px;
+  }
+
+  .form__wrapper--text-control {
+    padding-top: 49px;
+    padding-bottom: 52px;
+  }
+
+  .form__wrapper--phone {
+    padding-bottom: 0;
+  }
+
+  .form__wrapper--email {
+    padding-bottom: 27px;
+  }
+
+  .form__group--extra .form__wrapper {
+    padding-bottom: 38px;
+  }
+
   .form__list--checkbox {
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 59px;
+  }
+
+  .form__list--text-control {
+    row-gap: 19px;
   }
 
   .form__footer {
