@@ -6,7 +6,7 @@
 
 .form__group {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 17px;
   padding: 0;
   border: 0;
 }
@@ -37,7 +37,8 @@
 }
 
 .form__list--checkbox {
-  row-gap: 24px;
+  row-gap: 23px;
+  margin-top: -5px;
 }
 
 .form__list--text-control {
@@ -71,7 +72,7 @@
 
   .form__title-wrapper::before {
     content: "";
-    width: 100%;
+    width: 97%;
     height: 1px;
     position: absolute;
     top: 50%;
@@ -83,6 +84,24 @@
     width: fit-content;
     padding-right: 17px;
     background-color: @bg-color;
+
+    &--radiobutton {
+      padding-right: 22px;
+    }
+
+    &--phone {
+      margin-top: 17px;
+      margin-bottom: 2px;
+    }
+
+    &--email {
+      margin-top: -3px;
+      margin-bottom: 1px;
+    }
+
+    &--extra {
+      margin-top: -4px;
+    }
   }
 }
 

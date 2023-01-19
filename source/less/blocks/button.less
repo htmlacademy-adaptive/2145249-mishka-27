@@ -7,10 +7,9 @@
   text-decoration: none;
   .font-style(700; 18px; 20px; @text-color);
   margin: 0;
-  padding: 16px;
+  padding: 14px;
   text-align: center;
-  outline: 2px solid @text-color;
-  border: 0;
+  border: 2px solid @text-color;
   background-color: @bg-color;
 
   &:hover {
@@ -40,5 +39,11 @@
 
   .button--reviews {
     min-width: 175px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button--reviews {
+    margin-top: 4px;
   }
 }
