@@ -9,12 +9,12 @@
     position: absolute;
     width: 100%;
     height: 6px;
-    bottom: -15px;
+    bottom: -34px;
   }
 }
 
 .reviews__wrapper {
-  margin: 30px;
+  margin: 16px 30px;
   display: flex;
   flex-direction: column;
 }
@@ -33,8 +33,7 @@
 
 .reviews__text {
   margin: 0;
-  margin-right: 31px;
-  margin-bottom: 33px;
+  margin-bottom: 31px;
   .font-style(400; 15px; 30px; @text-color);
 }
 
@@ -45,7 +44,7 @@
 }
 
 .reviews__author-nickname {
-  .font-style(400; 15px; 30px; @text-color);
+  .font-style(400; 17px; 30px; @text-color);
   margin: 0;
 }
 
@@ -84,13 +83,13 @@
       position: absolute;
       width: 100%;
       height: 17px;
-      bottom: -35px;
+      bottom: 1px;
     }
   }
 
   .reviews__wrapper {
-    margin: 50px 0;
-    padding: 82px 50px 47px;
+    margin: 9px 0;
+    padding: 79px 50px 125px;
     display: grid;
     grid-template-columns: auto 175px;
     background-image: url("/img/reviews-bg.jpg");
@@ -104,6 +103,7 @@
 
   .reviews__title {
     margin: 0;
+    margin-top: 6px;
     .font-style-title(700; 43px; 50px; @bold-text-color);
   }
 
@@ -120,7 +120,7 @@
   }
 
   .reviews__text {
-    margin: 39px 0 61px;
+    margin: 39px 0 58px;
     .font-style(400; 17px; 30px; @text-color);
   }
 
@@ -129,7 +129,7 @@
   }
 
   .reviews__author-nickname {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .reviews__prev,
@@ -155,11 +155,13 @@
     &::after {
       content: "";
       background-image: url("/img/wave-grey-desktop.svg");
+      background-repeat: no-repeat;
       position: absolute;
-      width: 100%;
       height: 23px;
-      left: 0;
+      width: @desktop-width - 100px;
+      left: 50%;
       bottom: -17px;
+      transform: translate(calc((-@desktop-width + 100px) / 2), 0);
     }
   }
 
@@ -167,7 +169,8 @@
     @margin-reviews: 50px;
     max-width: calc(@desktop-width - @margin-reviews * 2);
     box-sizing: border-box;
-    margin: @margin-reviews auto;
+    margin: 18px auto;
+    margin-bottom: 72px;
     padding: 78px 0 96px 174px;
     display: grid;
     grid-template-columns: auto 175px;
@@ -176,10 +179,11 @@
   .reviews__title {
     grid-row: 1 / 3;
     .font-style-title(700; 53px; 57px; @bold-text-color);
+    margin-top: 3px;
   }
 
   .reviews__text {
-    margin: 35px 0 44px;
+    margin: 36px 0 41px;
   }
 
   .reviews__author-name {

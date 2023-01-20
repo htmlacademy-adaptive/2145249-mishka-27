@@ -69,7 +69,7 @@
 }
 
 .production__description {
-  padding: 35px 27px 41px 34px;
+  padding: 34px 27px 41px 34px;
   margin: 0;
 }
 
@@ -88,10 +88,12 @@
 @media (min-width: @tablet-width) and (max-width: @desktop-width-but) {
   .production__title {
     grid-row: 2 / 3;
+    padding-bottom: 23px;
+    padding-left: 105px;
 
     &::before {
-      left: 42px;
-      top: 39px;
+      left: 41px;
+      top: 37px;
     }
   }
 
@@ -118,12 +120,6 @@
   .production__title {
     font-size: 20px;
     padding-top: 41px;
-    padding-bottom: 26px;
-
-    &::before {
-      left: 79px;
-      top: 47px;
-    }
   }
 
   .production__description {
@@ -150,7 +146,12 @@
   }
 
   .production__title {
-    padding: 96px 57px 29px 79px;
+    padding: 98px 57px 26px 78px;
+
+    &::before {
+      left: 78px;
+      top: 48px;
+    }
   }
 
   .production__video-wrapper {
