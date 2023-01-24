@@ -32,7 +32,7 @@
   }
 
   &--interior::before {
-    content: url("/img/interior.svg");
+    content: url("../img/interior.svg");
     position: absolute;
     top: 23px;
     right: 36px;
@@ -51,7 +51,7 @@
   }
 
   &--toys::before {
-    content: url("/img/toys.svg");
+    content: url("../img/toys.svg");
     position: absolute;
     top: 21px;
     right: 27px;
@@ -79,7 +79,10 @@
 
   .product-type__link {
     .font-style(700; 20px; 30px; @bg-color);
-    padding: 26px 160px 36px 36px;
+    padding: 26px 110px 36px 36px;
+    height: 100%;
+    box-sizing: border-box;
+    max-width: 515px;
 
     &--toys::before {
       top: 31px;
@@ -99,5 +102,9 @@
     padding: 0 50px;
     margin: 0 auto;
     margin-top: -15px;
+  }
+
+  .product-type__link {
+    max-width: 575px;
   }
 }
